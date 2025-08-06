@@ -4,7 +4,7 @@
 Quickly check for a new go version on go.dev. Plain and simple.
 For doing that it needs a working internet connection.
 
-Special thanks to the wonderful human being contributing the gopher drawing to this (micro) project.
+Special thanks ❤️ to the wonderful human being contributing the gopher drawing to this (micro) project.
 
 ## Usage
 ```
