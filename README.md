@@ -20,5 +20,5 @@ Version on go.dev: 1.24.5
 ## Get it
 Download the latest built executables or build it yourself.
 
-When you get the executables on MacOS you need to run
+When you get the executables on macOS you need to run
 `xattr -d com.apple.quarantine <Binary>` to start it on the command line.
