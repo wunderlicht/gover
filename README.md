@@ -1,5 +1,7 @@
 <img src="assets/Govers.webp" width="500" alt="old and grey gopher, new and shiny gopher">
 
+[![Build linux, windows, macOS](https://github.com/wunderlicht/gover/actions/workflows/release-artifacts.yml/badge.svg)](https://github.com/wunderlicht/gover/actions/workflows/release-artifacts.yml)
+
 # gover
 Quickly check for a new go version on go.dev. Plain and simple.
 For doing that it needs a working internet connection.
