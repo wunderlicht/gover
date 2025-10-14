@@ -13,7 +13,7 @@ type site struct {
 }
 
 func main() {
-	site := site{"https://go.dev/dl/", `<a class="download downloadBox" href="\/dl\/go(\d\.\d*\.\d*)\.darwin`}
+	site := site{"https://go.dev/dl/", `<a class="download downloadBox" href="\/dl\/go(\d\.\d*\.\d*)\.src`}
 
 	resp, err := http.Get(site.url)
 	if err != nil {
