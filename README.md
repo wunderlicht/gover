@@ -22,7 +22,9 @@ Example shows `gover` running on MacOS on an M-chip
 ## How it works
 1. Load https://go.dev/dl/
 2. perform a regex search for the current version number
-3. done
+3. get my process' GOOS and GOARCH
+4. Build the download link
+5. done
 
 ## Get it
 Download the latest built executables or build it yourself.
