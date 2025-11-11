@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"regexp"
+	"runtime"
 )
 
 type site struct {
@@ -13,7 +14,7 @@ type site struct {
 }
 
 func main() {
-	site := site{"https://go.dev/dl/", `<a class="download downloadBox" href="\/dl\/go(\d\.\d*\.\d*)\.src`}
+	site := site{"https://go.dev/dl/", `<a class="download downloadBox" href="\/dl\/go(\d*\.\d*\.\d*)\.src`}
 
 	resp, err := http.Get(site.url)
 	if err != nil {
@@ -32,4 +33,27 @@ func main() {
 	re := regexp.MustCompile(site.regexp)
 	version := re.FindStringSubmatch(string(bodyByte))
 	fmt.Printf("Version on go.dev: %s\n", version[1])
+
+	fmt.Println("Download:", getDlURL(version[1]))
+}
+
+func getDlURL(version string) (dlURL string) {
+	const srcExt = ".src.tar.gz"
+	osExt := map[string]string{
+		"darwin":  ".pkg",
+		"linux":   ".tar.gz",
+		"windows": ".msi",
+	}
+
+	baseURL := "https://go.dev/dl/"
+	file := "go" + version + "." + runtime.GOOS + "-" + runtime.GOARCH
+
+	ext, ok := osExt[runtime.GOOS]
+	if ok {
+		dlURL = baseURL + file + ext
+	} else {
+		dlURL = baseURL + file + srcExt
+	}
+
+	return
 }
