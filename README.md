@@ -1,6 +1,7 @@
 <img src="assets/Govers.webp" width="500" alt="old and grey gopher, new and shiny gopher">
 
 [![Build linux, windows, macOS](https://github.com/wunderlicht/gover/actions/workflows/release-artifacts.yml/badge.svg)](https://github.com/wunderlicht/gover/actions/workflows/release-artifacts.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/wunderlicht/gover)](https://goreportcard.com/report/github.com/wunderlicht/gover)
 
 # gover
 Quickly check for a new go version on go.dev. Plain and simple.
