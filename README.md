@@ -15,17 +15,19 @@ Special thanks ❤️ to the wonderful human being contributing the gopher drawi
 ## Usage
 ```
 > gover
+go version go1.25.4 darwin/arm64
 Version on go.dev: 1.25.4
 Download: https://go.dev/dl/go1.25.4.darwin-arm64.pkg
 ```
 Example shows `gover` running on MacOS on an M-chip
 
 ## How it works
-1. Load https://go.dev/dl/
-2. perform a regex search for the current version number
-3. get my process' GOOS and GOARCH
-4. Build the download link
-5. done
+1. display `go version`
+2. Load https://go.dev/dl/
+3. perform a regex search for the newest version number
+4. get my process' GOOS and GOARCH
+5. display the the download link
+6. done
 
 ## Get it
 Download the latest built executables or build it yourself.

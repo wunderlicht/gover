@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os/exec"
 	"regexp"
 	"runtime"
 )
@@ -15,6 +16,12 @@ type site struct {
 
 func main() {
 	site := site{"https://go.dev/dl/", `<a class="download downloadBox" href="\/dl\/go(\d*\.\d*\.\d*)\.src`}
+
+	installedVersion, err := exec.Command("go", "version").Output()
+	if err != nil {
+		panic("Can't get installed go version " + err.Error())
+	}
+	fmt.Printf("%s", installedVersion)
 
 	resp, err := http.Get(site.url)
 	if err != nil {
