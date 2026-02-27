@@ -30,7 +30,8 @@ Example shows `gover` running on MacOS on an M-chip
 6. done
 
 ## Get it
-Download the latest built executables or build it yourself.
+Easiest is `go install github.com/wunderlicht/gover@latest`
+or Download the latest built executables.
 
 When you get the executables on macOS you need to run
 `xattr -d com.apple.quarantine <Binary>` to start it on the command line.
